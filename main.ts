@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    if (Styrkod < 4) {
+    if (Styrkod < 5) {
         Styrkod = Styrkod + 1
     } else {
         Styrkod = 1
@@ -43,13 +43,21 @@ basic.forever(function () {
             . # # # .
             . . # . .
             `)
-    } else {
+    } else if (Styrkod == 4) {
         basic.showLeds(`
             . . # . .
             . # . . .
             # # # # #
             . # . . .
             . . # . .
+            `)
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # . # .
+            . . # . .
+            . . . . .
             `)
     }
 })
